@@ -21,11 +21,13 @@
   <body>
     <div class="NFT-card">
       <figure class="NFT-card__figure">
-        <img
-          src="./assets/image-equilibrium.jpg"
-          alt="cube balancing on a corner"
-          class="NFT-card__image"
-        />
+        <div class="NFT-card__image-wrapper">
+          <img
+            src="./assets/image-equilibrium.jpg"
+            alt="cube balancing on a corner"
+            class="NFT-card__image"
+          />
+        </div>
         <figcaption class="NFT-card__caption">
           <h1 class="NFT-card__title">Equilibrium #3429</h1>
           <p class="NFT-card__description">
@@ -43,21 +45,22 @@
               src="./assets/icon-clock.svg"
               alt="a clock"
             />
-            <span class=".NFT-card__time-left">3 days left</span>
+            <span class="NFT-card__time-left">3 days left</span>
           </div>
         </figcaption>
-        <hr />
-        <div class="NFT-card__creator">
-          <img
-            class="NFT-card__creator-avatar"
-            src="./assets/image-avatar.png"
-            alt=""
-          />
-          <span class="NFT-card__creator-name"
-            >Creation of <span>Jules Wyvern</span></span
-          >
-        </div>
       </figure>
+      <hr />
+      <div class="NFT-card__creator">
+        <img
+          class="NFT-card__creator-avatar"
+          src="./assets/image-avatar.png"
+          alt=""
+        />
+        <span class="NFT-card__credit"
+          >Creation of
+          <span class="NFT-card__creator-name">Jules Wyvern</span></span
+        >
+      </div>
     </div>
   </body>
 </html>

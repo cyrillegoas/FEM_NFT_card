@@ -1,0 +1,108 @@
+@use "../abstracts/colors";
+@use "../abstracts/fonts";
+@use "sass:color";
+
+.NFT-card {
+  width: 21.875rem;
+  padding: 1.5rem;
+  padding-bottom: 2rem;
+  background-color: colors.$darker-blue;
+  border-radius: 15px;
+  font-family: fonts.$outfit;
+  line-height: initial;
+
+  &__image-wrapper {
+    position: relative;
+    &:hover::after {
+      content: url("../../assets/icon-view.svg");
+      background-color: color.scale(colors.$cyan, $alpha: -50%);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+    }
+  }
+
+  &__image {
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+  }
+
+  &__title {
+    color: colors.$white;
+    font-size: 1.375rem;
+    margin-bottom: 1rem;
+
+    &:hover {
+      color: colors.$cyan;
+    }
+  }
+
+  &__description {
+    color: colors.$soft-blue;
+    font-size: 1.125rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    line-height: 1.44;
+  }
+
+  &__buy-infos {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  &__currency-logo {
+    width: 0.6875rem;
+    height: 1.125rem;
+    margin-right: 0.405rem;
+  }
+
+  &__price {
+    color: colors.$cyan;
+    margin-right: auto;
+  }
+
+  &__clock {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.48125rem;
+  }
+
+  &__time-left {
+    color: colors.$soft-blue;
+  }
+  hr {
+    color: colors.$dark-blue;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &__creator {
+    display: flex;
+    align-items: center;
+  }
+
+  &__creator-avatar {
+    width: 2.0625rem;
+    border-radius: 50%;
+    border: 1px solid colors.$white;
+    margin-right: 1rem;
+  }
+
+  &__credit {
+    color: colors.$soft-blue;
+  }
+
+  &__creator-name {
+    color: colors.$white;
+    &:hover {
+      color: colors.$cyan;
+    }
+  }
+}
